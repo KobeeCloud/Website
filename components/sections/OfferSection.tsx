@@ -36,14 +36,14 @@ const offers = [
     ],
   },
   {
-    title: 'Tworzenie stron i aplikacji',
+    title: 'Strony WWW dla małych firm',
     icon: <Globe size={32} />,
     bullets: [
       'Modern stack: Next.js, React, TypeScript',
-      'Performance-first architecture',
-      'SEO i accessibility best practices',
-      'Hosting i CDN (Vercel, Cloudflare)',
-      'Full CI/CD integration',
+      'Responsywne, szybkie, SEO-friendly',
+      'Landing pages, wizytówki, strony firmowe',
+      'Hosting w chmurze (Vercel, Cloudflare)',
+      'Pełne wdrożenie i uruchomienie',
     ],
   },
   {
@@ -58,14 +58,14 @@ const offers = [
     ],
   },
   {
-    title: 'Utrzymanie & Support',
+    title: 'Maintenance & Support',
     icon: <Wrench size={32} />,
     bullets: [
-      'SLA-based support (99.9%+)',
-      '24/7 monitoring i incident response',
+      'Utrzymanie stron i aplikacji WWW',
+      'Monitoring i incident response',
       'Regularne audyty bezpieczeństwa',
       'Performance optimization',
-      'Dokumentacja i knowledge transfer',
+      'Dokumentacja i wsparcie techniczne',
     ],
   },
 ];
@@ -74,18 +74,18 @@ export function OfferSection() {
   return (
     <section id="oferta" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             W czym mogę <span className="gradient-text">pomóc</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            Pracuję na kontrakcie B2B - dołączam do Twojego teamu jako DevOps Engineer
-            i wspieram w automatyzacji, infrastrukturze i deploymentach.
+            DevOps B2B dla firm oraz strony WWW dla małych biznesów.
+            Kontrakt B2B, projekty, wsparcie zespołów, maintenance.
           </p>
         </div>
 
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((offer) => (
             <OfferCard
@@ -97,7 +97,7 @@ export function OfferSection() {
           ))}
         </div>
 
-        
+
         <div className="text-center mt-16">
           <p className="text-muted mb-6">
             Szukasz DevOps Engineera na projekt lub do teamu?

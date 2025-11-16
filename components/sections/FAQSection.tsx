@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: 'Jakie masz doświadczenie?',
-    answer: 'Komercyjnie (~2 lata): automatyzacja Azure, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps), build automation (Perl), Vault. Samodzielnie poznałem: Kubernetes (od podstaw po zaawansowane), GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana/Loki), AWS, GCP. Pasjonat DevOps - cały czas się uczę i testuję nowe narzędzia.',
+    answer: 'Komercyjnie (~2 lata): automatyzacja Azure, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps), build automation (Perl), Vault. Samodzielnie poznałem: Kubernetes (od podstaw po zaawansowane), GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana/Loki). Dla małych firm tworzę też strony WWW (Next.js, React, TypeScript).',
   },
   {
     question: 'Na jakim stacku pracujesz?',
@@ -22,20 +22,20 @@ const faqs = [
     answer: 'Tak! Mam doświadczenie z automatyzacją środowisk w Azure. Mogę pomóc z migracją, audytem obecnej infrastruktury, zaprojektowaniem architektury i wdrożeniem z IaC.',
   },
   {
-    question: 'Jak szybko mogę zobaczyć efekty?',
-    answer: 'Zależy od projektu. Podstawowe CI/CD pipeline można postawić w 1-2 tygodnie. Pełna infrastruktura z Kubernetes to 4-8 tygodni. Pracuję iteracyjnie - widzisz postępy na bieżąco.',
+    question: 'Czy robisz strony WWW dla małych firm?',
+    answer: 'Tak! Tworzę nowoczesne strony (Next.js, React, TypeScript) - landing pages, wizytówki, strony firmowe. Pełne wdrożenie w chmurze, SEO, responsywność. Oferuję też maintenance i wsparcie techniczne.',
   },
   {
     question: 'Czy oferujesz długoterminowe wsparcie?',
-    answer: 'Tak - mogę dołączyć do teamu na stałe (kontrakt B2B long-term) lub zająć się konkretnym projektem. Elastyczne formy współpracy - od pojedynczych zadań po pełen etat.',
+    answer: 'Tak - mogę dołączyć do teamu na stałe (kontrakt B2B long-term), zająć się projektem lub zapewnić maintenance stron/aplikacji. Elastyczne formy współpracy.',
+  },
+  {
+    question: 'Gdzie działasz?',
+    answer: 'Jestem z Rumi (rejon Gdyni) - obsługuję całe Trójmiasto (Gdynia, Gdańsk, Sopot) oraz pracuję zdalnie z całą Polską.',
   },
   {
     question: 'Jak wyglądają koszty?',
     answer: 'Stawka ustalana indywidualnie w zależności od zakresu pracy, formy współpracy (full-time/part-time/projekt) i długości kontraktu. Napisz - ustalimy szczegóły pod Twoje potrzeby.',
-  },
-  {
-    question: 'Co jeśli nie mamy jeszcze infrastruktury?',
-    answer: 'Pomogę od zera - zaprojektuję architekturę, przygotuję środowiska (dev/stage/prod), wdrożę CI/CD i monitoring. Możecie skupić się na produkcie, ja zapewnię infrastrukturę.',
   },
 ];
 
@@ -43,7 +43,7 @@ export function FAQSection() {
   return (
     <section id="faq" className="py-24 bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             Często zadawane <span className="gradient-text">pytania</span>
@@ -53,7 +53,7 @@ export function FAQSection() {
           </p>
         </div>
 
-        
+
         <Accordion.Root type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <Accordion.Item
@@ -81,7 +81,7 @@ export function FAQSection() {
           ))}
         </Accordion.Root>
 
-        
+
         <div className="text-center mt-12">
           <p className="text-muted mb-6">Masz inne pytanie?</p>
           <a

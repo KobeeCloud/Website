@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "KobeCloud",
+  "description": "DevOps Engineer B2B - automatyzacja infrastruktury, Kubernetes, CI/CD, strony WWW dla małych firm. Wdrożenia i maintenance.",
+  "url": "https://kobecloud.pl",
+  "logo": "https://kobecloud.pl/logo.png",
+  "image": "https://kobecloud.pl/og-image.jpg",
+  "telephone": "+48-XXX-XXX-XXX",
+  "email": "kontakt@kobecloud.pl",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rumia",
+    "addressRegion": "Pomorskie",
+    "addressCountry": "PL",
+    "postalCode": "84-230"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 54.5719,
+    "longitude": 18.3937
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Gdynia"
+    },
+    {
+      "@type": "City",
+      "name": "Gdańsk"
+    },
+    {
+      "@type": "City",
+      "name": "Sopot"
+    },
+    {
+      "@type": "Country",
+      "name": "Polska"
+    }
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "founder": {
+    "@type": "Person",
+    "name": "Jakub Pospieszny",
+    "jobTitle": "DevOps Engineer",
+    "url": "https://github.com/Kobeep",
+    "sameAs": [
+      "https://www.linkedin.com/in/jakub-pospieszny-085a632a0/",
+      "https://github.com/Kobeep"
+    ]
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "email": "kontakt@kobecloud.pl",
+    "availableLanguage": ["Polish", "English"]
+  },
+  "serviceType": [
+    "DevOps",
+    "Infrastructure as Code",
+    "Kubernetes",
+    "CI/CD",
+    "Cloud Infrastructure",
+    "Website Development",
+    "Website Maintenance"
+  ],
+  "knowsAbout": [
+    "Azure",
+    "AWS",
+    "GCP",
+    "Terraform",
+    "Ansible",
+    "Kubernetes",
+    "Docker",
+    "Jenkins",
+    "GitOps",
+    "Prometheus",
+    "Grafana"
+  ]
+}

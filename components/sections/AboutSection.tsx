@@ -34,13 +34,13 @@ export function AboutSection() {
   return (
     <section id="o-firmie" className="py-24 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
             O <span className="gradient-text">KobeCloud</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto mb-2">
-            DevOps Engineer B2B - łączę komercyjne doświadczenie z Azure/Terraform/CI/CD
+            DevOps Engineer B2B z Gdyni/Rumi - łączę komercyjne doświadczenie z Azure/Terraform/CI/CD
             z samodzielnie poznanym Kubernetes, GitOps i monitoringiem.
           </p>
           <p className="text-lg text-muted/80">
@@ -48,9 +48,9 @@ export function AboutSection() {
           </p>
         </div>
 
-        
+
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          
+
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Doświadczenie</h3>
@@ -63,16 +63,15 @@ export function AboutSection() {
                   <br />• Praca z zespołami nad stabilnością systemów produkcyjnych
                 </p>
                 <p>
-                  <strong className="text-foreground">Samodzielna nauka i projekty własne:</strong>
+                  <strong className="text-foreground">Samodzielna nauka i projekty:</strong>
                   <br />• Kubernetes - od podstaw po zaawansowane wdrożenia
                   <br />• GitOps (ArgoCD, Flux) - deklaratywne zarządzanie
                   <br />• Monitoring stack (Prometheus, Grafana, Loki)
-                  <br />• AWS, GCP - projekty testowe i eksperymentalne
+                  <br />• Strony WWW (Next.js, React, TypeScript) - tworzenie i wdrożenia
                 </p>
                 <p>
-                  <strong className="text-foreground">Podejście:</strong> Łączę komercyjne doświadczenie
-                  z pasją do nauki. Kubernetes poznałem sam, podobnie jak wiele innych narzędzi DevOps.
-                  Wszystko testuję w praktyce - od dokumentacji po działające POC-y.
+                  <strong className="text-foreground">Lokalizacja:</strong> Rumia (rejon Gdyni), obsługuję całe Trójmiasto i zdalnie.
+                  Dla małych firm oferuję również tworzenie stron WWW, wdrożenia i maintenance.
                 </p>
               </div>
             </div>            <div className="bg-secondary/50 border border-border rounded-xl p-6">
@@ -114,7 +113,7 @@ export function AboutSection() {
             </div>
           </div>
 
-          
+
           <div className="grid sm:grid-cols-2 gap-6">
             {features.map((feature) => (
               <div
@@ -129,7 +128,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div
@@ -142,7 +141,7 @@ export function AboutSection() {
           ))}
         </div>
 
-        
+
         <div className="text-center mt-16">
           <p className="text-muted mb-6">
             Chcesz dowiedzieć się więcej lub omówić swój projekt?
