@@ -2,52 +2,55 @@
 
 import { useState } from 'react';
 import {
-  Cloud, Server, Database, Container, GitBranch,
-  Gauge, Shield, Lock, FileCode, Terminal,
-  Code2, Settings, Package, Activity, Workflow,
-  Eye, BarChart3, Boxes, Zap, CircleDot
-} from 'lucide-react';
+  SiMicrosoftazure as SiAzure, SiAmazon as SiAWS, SiGooglecloud, SiTerraform, SiAnsible,
+  SiKubernetes, SiDocker, SiArgo, SiFlux,
+  SiJenkins, SiGithubactions, SiCircleci, SiGitlab,
+  SiPrometheus, SiGrafana, SiSplunk, SiVault,
+  SiPython, SiGo, SiGnubash, SiPerl,
+  SiPostgresql, SiJira, SiGithub, SiPerforce,
+} from 'react-icons/si';
+import { FileCode, Workflow } from 'lucide-react';
 
 const techStack = {
   'Cloud & Infrastructure': [
-    { name: 'Azure', color: '#0089D6', description: 'Primary Cloud Platform', icon: Cloud },
-    { name: 'AWS', color: '#FF9900', description: 'Cloud Provider', icon: Cloud },
-    { name: 'GCP', color: '#4285F4', description: 'Cloud Provider', icon: Cloud },
-    { name: 'Terraform', color: '#7B42BC', description: 'Infrastructure as Code', icon: Boxes },
-    { name: 'Ansible', color: '#EE0000', description: 'Configuration Management', icon: Settings },
+    { name: 'Azure', description: 'Primary Cloud Platform', icon: SiAzure, color: '#0089D6' },
+    { name: 'AWS', description: 'Cloud Provider', icon: SiAWS, color: '#FF9900' },
+    { name: 'GCP', description: 'Cloud Provider', icon: SiGooglecloud, color: '#4285F4' },
+    { name: 'Terraform', description: 'Infrastructure as Code', icon: SiTerraform, color: '#7B42BC' },
+    { name: 'Ansible', description: 'Configuration Management', icon: SiAnsible, color: '#EE0000' },
   ],
   'Container & Orchestration': [
-    { name: 'Kubernetes', color: '#326CE5', description: 'Container Orchestration', icon: Boxes },
-    { name: 'Docker', color: '#2496ED', description: 'Containerization', icon: Container },
-    { name: 'ArgoCD', color: '#EF7B4D', description: 'GitOps CD', icon: GitBranch },
-    { name: 'Flux', color: '#5468FF', description: 'GitOps Operator', icon: Workflow },
+    { name: 'Kubernetes', description: 'Container Orchestration', icon: SiKubernetes, color: '#326CE5' },
+    { name: 'Docker', description: 'Containerization', icon: SiDocker, color: '#2496ED' },
+    { name: 'ArgoCD', description: 'GitOps CD', icon: SiArgo, color: '#EF7B4D' },
+    { name: 'Flux', description: 'GitOps Operator', icon: SiFlux, color: '#5468FF' },
   ],
   'CI/CD & Automation': [
-    { name: 'Jenkins', color: '#D24939', description: 'Automation Server', icon: Zap },
-    { name: 'Azure DevOps', color: '#0078D7', description: 'CI/CD Platform', icon: Workflow },
-    { name: 'GitHub Actions', color: '#2088FF', description: 'CI/CD Workflows', icon: GitBranch },
-    { name: 'CircleCI', color: '#343434', description: 'CI/CD Platform', icon: CircleDot },
-    { name: 'GitLab CI', color: '#FC6D26', description: 'CI/CD Platform', icon: GitBranch },
+    { name: 'Jenkins', description: 'Automation Server', icon: SiJenkins, color: '#D24939' },
+    { name: 'Azure DevOps', description: 'CI/CD Platform', icon: Workflow, color: '#0078D7' },
+    { name: 'GitHub Actions', description: 'CI/CD Workflows', icon: SiGithubactions, color: '#2088FF' },
+    { name: 'CircleCI', description: 'CI/CD Platform', icon: SiCircleci, color: '#343434' },
+    { name: 'GitLab CI', description: 'CI/CD Platform', icon: SiGitlab, color: '#FC6D26' },
   ],
   'Monitoring & Security': [
-    { name: 'Prometheus', color: '#E6522C', description: 'Metrics & Alerting', icon: Activity },
-    { name: 'Grafana', color: '#F46800', description: 'Visualization', icon: BarChart3 },
-    { name: 'Splunk', color: '#000000', description: 'Log Analytics', icon: Eye },
-    { name: 'Vault', color: '#000000', description: 'Secrets Management', icon: Lock },
-    { name: 'Loki', color: '#F46800', description: 'Log Aggregation', icon: Database },
+    { name: 'Prometheus', description: 'Metrics & Alerting', icon: SiPrometheus, color: '#E6522C' },
+    { name: 'Grafana', description: 'Visualization', icon: SiGrafana, color: '#F46800' },
+    { name: 'Splunk', description: 'Log Analytics', icon: SiSplunk, color: '#000000' },
+    { name: 'Vault', description: 'Secrets Management', icon: SiVault, color: '#000000' },
+    { name: 'Loki', description: 'Log Aggregation', icon: SiGrafana, color: '#F46800' },
   ],
   'Languages & Scripting': [
-    { name: 'Python', color: '#3776AB', description: 'Automation & Scripting', icon: Code2 },
-    { name: 'Go', color: '#00ADD8', description: 'Systems Programming', icon: Code2 },
-    { name: 'Bash/Shell', color: '#4EAA25', description: 'Shell Scripting', icon: Terminal },
-    { name: 'Perl', color: '#39457E', description: 'Legacy Automation', icon: FileCode },
-    { name: 'Groovy', color: '#4298B8', description: 'Jenkins Pipelines', icon: FileCode },
+    { name: 'Python', description: 'Automation & Scripting', icon: SiPython, color: '#3776AB' },
+    { name: 'Go', description: 'Systems Programming', icon: SiGo, color: '#00ADD8' },
+    { name: 'Bash/Shell', description: 'Shell Scripting', icon: SiGnubash, color: '#4EAA25' },
+    { name: 'Perl', description: 'Legacy Automation', icon: SiPerl, color: '#39457E' },
+    { name: 'Groovy', description: 'Jenkins Pipelines', icon: FileCode, color: '#4298B8' },
   ],
   'Databases & Tools': [
-    { name: 'PostgreSQL', color: '#336791', description: 'Relational Database', icon: Database },
-    { name: 'Jira', color: '#0052CC', description: 'Project Management', icon: Package },
-    { name: 'GitHub', color: '#181717', description: 'Version Control', icon: GitBranch },
-    { name: 'Perforce', color: '#404040', description: 'Version Control', icon: Server },
+    { name: 'PostgreSQL', description: 'Relational Database', icon: SiPostgresql, color: '#336791' },
+    { name: 'Jira', description: 'Project Management', icon: SiJira, color: '#0052CC' },
+    { name: 'GitHub', description: 'Version Control', icon: SiGithub, color: '#181717' },
+    { name: 'Perforce', description: 'Version Control', icon: SiPerforce, color: '#404040' },
   ],
 };
 
@@ -98,11 +101,8 @@ export function TechStackSection() {
 
                 <div className="relative z-10">
 
-                  <div
-                    className="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                    style={{ backgroundColor: tech.color }}
-                  >
-                    <Icon size={32} className="text-white" />
+                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon size={48} style={{ color: tech.color }} />
                   </div>
 
 
