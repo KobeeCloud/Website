@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "KobeCloud",
-  "description": "DevOps Engineer B2B - automatyzacja infrastruktury, Kubernetes, CI/CD, strony WWW dla małych firm. Wdrożenia i maintenance.",
+  "description": "DevOps Engineer B2B z Gdyni/Rumi - automatyzacja infrastruktury (Terraform, Ansible, Kubernetes, Docker), CI/CD (Jenkins, GitHub Actions, Azure DevOps), monitoring (Prometheus, Grafana), strony WWW dla małych firm. Wdrożenia i maintenance w Trójmieście i zdalnie.",
   "url": "https://kobecloud.pl",
   "logo": "https://kobecloud.pl/logo.png",
   "image": "https://kobecloud.pl/og-image.jpg",
@@ -27,11 +27,31 @@
     },
     {
       "@type": "City",
+      "name": "Rumia"
+    },
+    {
+      "@type": "City",
       "name": "Gdańsk"
     },
     {
       "@type": "City",
       "name": "Sopot"
+    },
+    {
+      "@type": "City",
+      "name": "Reda"
+    },
+    {
+      "@type": "City",
+      "name": "Wejherowo"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Trójmiasto"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Pomorskie"
     },
     {
       "@type": "Country",
@@ -44,7 +64,12 @@
     "@type": "Person",
     "name": "Jakub Pospieszny",
     "jobTitle": "DevOps Engineer",
+    "description": "DevOps Engineer specjalizujący się w automatyzacji infrastruktury, Kubernetes, CI/CD i monitoringu. ~2 lata komercyjnego doświadczenia + pasjonat self-learningu.",
     "url": "https://github.com/Kobeep",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "KobeCloud"
+    },
     "sameAs": [
       "https://www.linkedin.com/in/jakub-pospieszny-085a632a0/",
       "https://github.com/Kobeep"

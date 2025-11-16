@@ -2,19 +2,19 @@
 
 import { useState } from 'react';
 import {
-  SiMicrosoftazure as SiAzure, SiAmazon as SiAWS, SiGooglecloud, SiTerraform, SiAnsible,
+  SiAmazon, SiGooglecloud, SiTerraform, SiAnsible,
   SiKubernetes, SiDocker, SiArgo, SiFlux,
   SiJenkins, SiGithubactions, SiCircleci, SiGitlab,
   SiPrometheus, SiGrafana, SiSplunk, SiVault,
   SiPython, SiGo, SiGnubash, SiPerl,
   SiPostgresql, SiJira, SiGithub, SiPerforce,
 } from 'react-icons/si';
-import { FileCode, Workflow } from 'lucide-react';
+import { FileCode, Workflow, Cloud } from 'lucide-react';
 
 const techStack = {
   'Cloud & Infrastructure': [
-    { name: 'Azure', description: 'Primary Cloud Platform', icon: SiAzure, color: '#0089D6' },
-    { name: 'AWS', description: 'Cloud Provider', icon: SiAWS, color: '#FF9900' },
+    { name: 'Azure', description: 'Primary Cloud Platform', icon: Cloud, color: '#0089D6' },
+    { name: 'AWS', description: 'Cloud Provider', icon: SiAmazon, color: '#FF9900' },
     { name: 'GCP', description: 'Cloud Provider', icon: SiGooglecloud, color: '#4285F4' },
     { name: 'Terraform', description: 'Infrastructure as Code', icon: SiTerraform, color: '#7B42BC' },
     { name: 'Ansible', description: 'Configuration Management', icon: SiAnsible, color: '#EE0000' },

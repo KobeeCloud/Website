@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kobecloud.pl'),
@@ -13,22 +14,59 @@ export const metadata: Metadata = {
   keywords: [
     "DevOps Gdynia",
     "DevOps Trójmiasto",
+    "DevOps Gdańsk",
+    "DevOps Sopot",
+    "DevOps Rumia",
     "DevOps B2B Polska",
+    "DevOps Engineer Gdynia",
+    "DevOps freelancer Polska",
+    "DevOps kontrakt B2B",
+    "DevOps zdalnie Polska",
     "Infrastructure as Code",
+    "IaC Polska",
+    "automatyzacja infrastruktury",
+    "automatyzacja deploymentów",
+    "Terraform Gdynia",
+    "Terraform Polska",
+    "Ansible automatyzacja",
     "Kubernetes Gdynia",
-    "CI/CD",
-    "Terraform",
-    "Ansible",
-    "Azure DevOps",
-    "AWS",
-    "GCP",
-    "GitOps",
-    "Monitoring Prometheus Grafana",
+    "Kubernetes Trójmiasto",
+    "Kubernetes wdrożenie",
+    "Docker kontenery",
+    "CI/CD pipeline",
+    "CI/CD automatyzacja",
+    "Jenkins Gdynia",
+    "GitHub Actions",
+    "GitLab CI/CD",
+    "Azure DevOps Polska",
+    "Azure Gdynia",
+    "Azure Cloud Polska",
+    "AWS Polska",
+    "AWS wdrożenie",
+    "GCP Polska",
+    "Google Cloud Polska",
+    "GitOps ArgoCD",
+    "GitOps Flux",
+    "Prometheus monitoring",
+    "Grafana dashboards",
+    "monitoring aplikacji",
     "strony internetowe małe firmy",
+    "strony WWW Gdynia",
+    "tworzenie stron internetowych",
     "maintenance stron WWW",
     "wdrożenia aplikacji",
-    "automatyzacja infrastruktury",
-    "DevOps freelancer Polska"
+    "hosting stron Gdynia",
+    "Next.js Polska",
+    "React developer Gdynia",
+    "programista Gdynia",
+    "IT freelancer Trójmiasto",
+    "konsultant DevOps",
+    "wsparcie infrastruktury",
+    "migracja do chmury",
+    "cloud migration Polska",
+    "Kubernetes cluster setup",
+    "CI/CD wdrożenie",
+    "automatyzacja procesów IT"
   ],
   authors: [{ name: "Jakub Pospieszny", url: "https://github.com/Kobeep" }],
   creator: "Jakub Pospieszny",
@@ -44,7 +82,7 @@ export const metadata: Metadata = {
     url: "https://kobecloud.pl",
     siteName: "KobeCloud - DevOps & Infrastructure",
     title: "KobeCloud - DevOps Engineer B2B | Gdynia, Trójmiasto",
-    description: "DevOps Engineer z Gdyni. Automatyzacja infrastruktury, Kubernetes, CI/CD, strony WWW dla małych firm. Kontrakt B2B, projekty, maintenance.",
+    description: "DevOps Engineer z Gdyni/Rumi. Automatyzacja infrastruktury (Terraform, Kubernetes, Docker), CI/CD (Jenkins, GitHub Actions), monitoring (Prometheus, Grafana), strony WWW dla małych firm. Kontrakt B2B, projekty, maintenance.",
     images: [
       {
         url: "/og-image.jpg",
@@ -115,6 +153,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
