@@ -40,7 +40,7 @@ export function AboutSection() {
             O <span className="gradient-text">KobeCloud</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto mb-2">
-            DevOps Engineer B2B z Gdyni/Rumi - łączę komercyjne doświadczenie z Azure/Terraform/CI/CD
+            DevOps Engineer z Gdyni/Rumi - łączę komercyjne doświadczenie z Azure/Terraform/CI/CD
             z samodzielnie poznanym Kubernetes, GitOps i monitoringiem.
           </p>
           <p className="text-lg text-muted/80">

@@ -6,8 +6,8 @@ import { cn } from '@/lib/utils';
 
 const faqs = [
   {
-    question: 'Jak wygląda współpraca B2B?',
-    answer: 'Pracuję na fakturę - kontrakt B2B. Mogę dołączyć do Twojego teamu na full-time lub part-time, albo wziąć konkretny projekt do realizacji. Elastyczne podejście - dopasowuję się do Twoich potrzeb.',
+    question: 'Jak wygląda współpraca?',
+    answer: 'Pracuję na fakturę (kontrakt B2B). Mogę dołączyć do Twojego teamu na full-time lub part-time, albo wziąć konkretny projekt do realizacji. Elastyczne podejście - dopasowuję się do Twoich potrzeb.',
   },
   {
     question: 'Jakie masz doświadczenie?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: 'Czy oferujesz długoterminowe wsparcie?',
-    answer: 'Tak - mogę dołączyć do teamu na stałe (kontrakt B2B long-term), zająć się projektem lub zapewnić maintenance stron/aplikacji. Elastyczne formy współpracy.',
+    answer: 'Tak - mogę dołączyć do teamu na stałe (long-term), zająć się projektem lub zapewnić maintenance stron/aplikacji. Elastyczne formy współpracy.',
   },
   {
     question: 'Gdzie działasz?',

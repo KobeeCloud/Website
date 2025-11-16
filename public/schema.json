@@ -7,7 +7,7 @@
   "logo": "https://kobecloud.pl/logo.png",
   "image": "https://kobecloud.pl/og-image.jpg",
   "telephone": "+48-XXX-XXX-XXX",
-  "email": "kontakt@kobecloud.pl",
+  "email": "kuba.pospieszny@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Rumia",
@@ -53,7 +53,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Sales",
-    "email": "kontakt@kobecloud.pl",
+    "email": "kuba.pospieszny@gmail.com",
     "availableLanguage": ["Polish", "English"]
   },
   "serviceType": [

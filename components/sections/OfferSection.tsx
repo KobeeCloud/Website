@@ -80,8 +80,8 @@ export function OfferSection() {
             W czym mogę <span className="gradient-text">pomóc</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto">
-            DevOps B2B dla firm oraz strony WWW dla małych biznesów.
-            Kontrakt B2B, projekty, wsparcie zespołów, maintenance.
+            DevOps dla firm oraz strony WWW dla małych biznesów.
+            Kontrakty, projekty, wsparcie zespołów, maintenance.
           </p>
         </div>
 

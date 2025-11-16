@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Proces', href: '#proces' },
   { name: 'Tech Stack', href: '#tech-stack' },
   { name: 'O firmie', href: '#o-firmie' },
-  { name: 'Kontakt', href: '#kontakt' },
+  { name: 'FAQ', href: '#faq' },
 ];
 
 export function Header() {
@@ -37,12 +37,12 @@ export function Header() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
+
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold gradient-text">KobeCloud</div>
           </Link>
 
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -61,7 +61,7 @@ export function Header() {
             </Link>
           </div>
 
-          
+
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
@@ -71,7 +71,7 @@ export function Header() {
           </button>
         </div>
 
-        
+
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">

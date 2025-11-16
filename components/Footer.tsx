@@ -31,7 +31,7 @@ export function Footer() {
           <div className="col-span-1">
             <div className="text-2xl font-bold gradient-text mb-4">KobeCloud</div>
             <p className="text-muted text-sm mb-4">
-              DevOps Engineer B2B - automatyzacja, infrastruktura, CI/CD dla Twojej firmy.
+              DevOps Engineer - automatyzacja, infrastruktura, CI/CD dla Twojej firmy.
             </p>
             <div className="flex space-x-4">
               <a

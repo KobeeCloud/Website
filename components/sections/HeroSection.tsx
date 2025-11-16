@@ -22,7 +22,7 @@ export function HeroSection() {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-up">
           <span className="gradient-text">KobeCloud</span>
           <br />
-          DevOps Engineer B2B
+          DevOps Engineer
           <br />
           Gdynia / Trójmiasto / Zdalnie
         </h1>
@@ -30,10 +30,8 @@ export function HeroSection() {
 
         <p className="text-xl text-muted max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-200">
           Automatyzacja infrastruktury, CI/CD, monitoring. Strony WWW dla małych firm - tworzenie, wdrożenie, maintenance.
-          Kontrakt B2B, projekty, wsparcie zespołów.
+          Kontrakty, projekty, wsparcie zespołów.
         </p>
-
-
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-400">
           <Link
             href="#kontakt"

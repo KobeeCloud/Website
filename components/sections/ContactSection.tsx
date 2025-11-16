@@ -75,7 +75,7 @@ export function ContactSection() {
                 <p className="text-muted">
                   <span className="font-semibold text-foreground">Email:</span>
                   <br />
-                  kontakt@kobecloud.pl
+                  kuba.pospieszny@gmail.com
                 </p>
                 <p className="text-muted">
                   <span className="font-semibold text-foreground">Dostępność:</span>
@@ -110,11 +110,11 @@ export function ContactSection() {
             </div>
 
             <div className="bg-secondary/50 border border-border rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-3">Praca B2B</h4>
+              <h4 className="font-semibold text-foreground mb-3">Forma współpracy</h4>
               <ul className="space-y-2 text-sm text-muted">
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                  <span>Kontrakt B2B - elastyczne formy współpracy</span>
+                  <span>Kontrakt B2B - elastyczne formy</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
@@ -126,7 +126,7 @@ export function ContactSection() {
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                  <span>Komercyjne projekty B2B</span>
+                  <span>Komercyjne projekty dla firm</span>
                 </li>
               </ul>
             </div>
@@ -206,7 +206,7 @@ export function ContactSection() {
 
               {submitStatus === 'error' && (
                 <div className="p-4 bg-danger/10 border border-danger/30 rounded-lg text-danger text-sm">
-                  ✗ Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na kontakt@kobecloud.pl
+                  ✗ Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na kuba.pospieszny@gmail.com
                 </div>
               )}
 
