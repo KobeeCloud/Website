@@ -105,6 +105,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kobecloud.pl",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

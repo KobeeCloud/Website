@@ -1,0 +1,16 @@
+{
+  "name": "KobeCloud - DevOps Engineer B2B",
+  "short_name": "KobeCloud",
+  "description": "DevOps Engineer - Trójmiasto i zdalnie. Automatyzacja infrastruktury, Kubernetes, CI/CD, strony WWW.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#6366F1",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
