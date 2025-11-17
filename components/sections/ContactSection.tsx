@@ -20,17 +20,26 @@ export function ContactSection() {
     setSubmitStatus('idle');
 
     try {
-      // EmailJS send
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        message: formData.message,
+      };
+
+      // Wyślij email do admina (Ty)
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          company: formData.company,
-          message: formData.message,
-          to_email: 'kuba.pospieszny@gmail.com',
-        },
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      // Wyślij automatyczną odpowiedź do klienta
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_REPLY!,
+        templateParams,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
