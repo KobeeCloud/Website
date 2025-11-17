@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818CF8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="80" fill="url(#grad)"/>
+
+  <!-- Letter K -->
+  <text x="140" y="370" font-family="Arial, sans-serif" font-weight="900" font-size="280" fill="#FFFFFF">K</text>
+
+  <!-- Letter C -->
+  <text x="290" y="370" font-family="Arial, sans-serif" font-weight="900" font-size="280" fill="#FFFFFF">C</text>
+
+  <!-- Small cloud icon accent -->
+  <path d="M380 160c-8-18-26-30-46-30-6 0-12 1-17 3-11-14-28-23-47-23-33 0-60 27-60 60 0 1 0 3 0 4-25 4-44 26-44 52 0 29 24 53 53 53h148c29 0 53-24 53-53 0-26-19-48-44-52 1-5 2-9 2-14 0-0 2 0 2 0z"
+        fill="rgba(255,255,255,0.2)"
+        transform="translate(20, -20)"/>
+</svg>
