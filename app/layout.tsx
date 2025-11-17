@@ -83,14 +83,6 @@ export const metadata: Metadata = {
     siteName: "KobeCloud - DevOps & Infrastructure",
     title: "KobeCloud - DevOps Engineer B2B | Gdynia, Trójmiasto",
     description: "DevOps Engineer z Gdyni/Rumi. Automatyzacja infrastruktury (Terraform, Kubernetes, Docker), CI/CD (Jenkins, GitHub Actions), monitoring (Prometheus, Grafana), strony WWW dla małych firm. Kontrakt B2B, projekty, maintenance.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "KobeCloud - DevOps Engineer B2B Gdynia",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
