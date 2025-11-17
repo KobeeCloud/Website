@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
@@ -10,9 +10,16 @@ export function ContactSection() {
     email: '',
     company: '',
     message: '',
+    honeypot: '', // Pole ukryte - jeśli wypełnione = bot
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [formStartTime, setFormStartTime] = useState<number>(0);
+
+  // Zapisz czas gdy formularz się załadował (boty wypełniają błyskawicznie)
+  useEffect(() => {
+    setFormStartTime(Date.now());
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +27,23 @@ export function ContactSection() {
     setSubmitStatus('idle');
 
     try {
+      // Ochrona 1: Honeypot - jeśli pole ukryte wypełnione = bot
+      if (formData.honeypot) {
+        console.warn('Bot detected: honeypot field filled');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Ochrona 2: Rate limiting - formularz wypełniony za szybko (< 3 sekundy)
+      const timeSpent = Date.now() - formStartTime;
+      if (timeSpent < 3000) {
+        console.warn('Bot detected: form filled too quickly');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -44,7 +68,7 @@ export function ContactSection() {
       );
 
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', company: '', message: '' });
+      setFormData({ name: '', email: '', company: '', message: '', honeypot: '' });
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
@@ -191,6 +215,20 @@ export function ContactSection() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   placeholder="Nazwa firmy"
+                />
+              </div>
+
+              {/* Honeypot - ukryte pole dla ochrony przed botami */}
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="honeypot">Leave this field blank</label>
+                <input
+                  type="text"
+                  id="honeypot"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
                 />
               </div>
 
