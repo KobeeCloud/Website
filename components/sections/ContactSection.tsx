@@ -198,6 +198,19 @@ export function ContactSection() {
                 />
               </div>
 
+              <div className="bg-secondary/30 border border-border rounded-lg p-4">
+                <p className="text-xs text-muted leading-relaxed">
+                  <strong className="text-foreground">Klauzula informacyjna RODO:</strong><br />
+                  Administrator danych: KobeCloud Jakub Pospieszny, NIP: 5882530612, kontakt: kuba.pospieszny@gmail.com.
+                  Twoje dane osobowe będą przetwarzane w celu odpowiedzi na zapytanie (podstawa prawna: art. 6 ust. 1 lit. a RODO - zgoda).
+                  Przysługuje Ci prawo dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia
+                  sprzeciwu. Szczegóły w{' '}
+                  <a href="/privacy" className="text-primary hover:underline">
+                    Polityce Prywatności
+                  </a>.
+                </p>
+              </div>
+
               {submitStatus === 'success' && (
                 <div className="p-4 bg-success/10 border border-success/30 rounded-lg text-success text-sm">
                   ✓ Wiadomość wysłana! Odezwę się wkrótce.
@@ -228,12 +241,11 @@ export function ContactSection() {
                 )}
               </button>
 
-              <p className="text-xs text-muted text-center">
-                Przesyłając formularz akceptujesz{' '}
-                <a href="/privacy" className="text-primary hover:underline">
-                  politykę prywatności
-                </a>
-                .
+              <p className="text-xs text-muted/70 text-center">
+                Wysyłając formularz wyrażasz zgodę na przetwarzanie danych osobowych zgodnie z{' '}
+                <a href="/privacy" className="text-primary hover:underline font-medium">
+                  Polityką Prywatności
+                </a>.
               </p>
             </form>
           </div>

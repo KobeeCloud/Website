@@ -13,13 +13,27 @@ export default function PrivacyPage() {
               Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych
               przekazanych przez Użytkowników w związku z korzystaniem ze strony kobecloud.pl.
             </p>
-            <p>
-              <strong>Administrator danych:</strong> Jakub Pospieszny, KobeCloud<br />
-              <strong>Kontakt:</strong> kuba.pospieszny@gmail.com
-            </p>
-          </section>
-
-          <section>
+            <div className="bg-secondary/30 border border-border rounded-lg p-4">
+              <p className="mb-2">
+                <strong className="text-foreground">Administrator danych:</strong> KobeCloud Jakub Pospieszny
+              </p>
+              <p className="mb-2">
+                <strong className="text-foreground">Adres:</strong> Mickiewicza 19, 84-242 Luzino
+              </p>
+              <p className="mb-2">
+                <strong className="text-foreground">NIP:</strong> 5882530612
+              </p>
+              <p className="mb-2">
+                <strong className="text-foreground">REGON:</strong> 541797979
+              </p>
+              <p className="mb-2">
+                <strong className="text-foreground">Forma prawna:</strong> Indywidualna działalność gospodarcza
+              </p>
+              <p>
+                <strong className="text-foreground">Kontakt:</strong> kuba.pospieszny@gmail.com
+              </p>
+            </div>
+          </section>          <section>
             <h2 className="text-2xl font-semibold text-foreground mb-4">2. Pliki Cookies</h2>
             <p className="mb-4">
               Strona wykorzystuje pliki cookies (ciasteczka) w celu:

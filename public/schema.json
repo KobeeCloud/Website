@@ -10,24 +10,25 @@
   "email": "kuba.pospieszny@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Rumia",
+    "streetAddress": "Mickiewicza 19",
+    "addressLocality": "Luzino",
     "addressRegion": "Pomorskie",
     "addressCountry": "PL",
-    "postalCode": "84-230"
+    "postalCode": "84-242"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 54.5719,
-    "longitude": 18.3937
+    "latitude": 54.5402,
+    "longitude": 18.2177
   },
   "areaServed": [
     {
       "@type": "City",
-      "name": "Gdynia"
+      "name": "Luzino"
     },
     {
       "@type": "City",
-      "name": "Rumia"
+      "name": "Gdynia"
     },
     {
       "@type": "City",

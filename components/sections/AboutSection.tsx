@@ -69,7 +69,7 @@ export function AboutSection() {
                   <br />• Strony WWW (Next.js, React, TypeScript) - tworzenie i wdrożenia
                 </p>
                 <p>
-                  <strong className="text-foreground">Lokalizacja:</strong> Rumia (rejon Gdyni), obsługuję całe Trójmiasto i zdalnie.
+                  <strong className="text-foreground">Lokalizacja:</strong> Luzino (rejon Gdyni), obsługuję całe Trójmiasto i zdalnie.
                   Dla małych firm oferuję również tworzenie stron WWW, wdrożenia i maintenance.
                 </p>
               </div>
@@ -83,6 +83,10 @@ export function AboutSection() {
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
                   <span>Infrastructure as Code (Terraform, Ansible)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                  <span>Cloud Platforms (Azure <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full ml-1">Preferowane</span>, AWS, GCP)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
@@ -102,7 +106,7 @@ export function AboutSection() {
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                  <span>Scripting (Python, Go, Bash, Perl, Groovy)</span>
+                  <span>Scripting (Bash <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full ml-1">Preferowane</span>, Python, Go, Perl, Groovy)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />

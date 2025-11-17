@@ -116,8 +116,22 @@ export function Footer() {
 
 
         <div className="pt-8 border-t border-border">
-          <p className="text-center text-muted text-sm">
-            © {currentYear} KobeCloud Jakub Pospieszny. Wszystkie prawa zastrzeżone.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="text-center md:text-left">
+              <p className="text-muted text-sm">
+                © {currentYear} KobeCloud Jakub Pospieszny. Wszystkie prawa zastrzeżone.
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-muted text-xs">
+                <strong className="text-foreground">KobeCloud Jakub Pospieszny</strong>
+                <br />
+                NIP: 5882530612 | REGON: 541797979
+              </p>
+            </div>
+          </div>
+          <p className="text-center text-muted/70 text-xs">
+            Indywidualna działalność gospodarcza | Mickiewicza 19, 84-242 Luzino
           </p>
         </div>
       </div>

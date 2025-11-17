@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "DevOps Trójmiasto",
     "DevOps Gdańsk",
     "DevOps Sopot",
-    "DevOps Rumia",
+    "DevOps Luzino",
     "DevOps B2B Polska",
     "DevOps Engineer Gdynia",
     "DevOps freelancer Polska",
@@ -135,7 +135,7 @@ export default function RootLayout({
               "url": "https://kobecloud.pl",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Rumia",
+                "addressLocality": "Luzino",
                 "addressRegion": "Pomorskie",
                 "addressCountry": "PL"
               },
