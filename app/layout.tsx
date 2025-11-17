@@ -12,60 +12,169 @@ export const metadata: Metadata = {
   },
   description: "DevOps Engineer B2B - Trójmiasto i zdalnie. Automatyzacja infrastruktury (Azure, AWS, Terraform, Kubernetes), CI/CD, strony WWW dla małych firm. Wdrożenia i maintenance. ~2 lata komercyjnego doświadczenia.",
   keywords: [
+    // Lokalizacja główna
     "DevOps Trójmiasto",
     "DevOps Gdańsk",
     "DevOps Sopot",
+    "DevOps Gdynia",
+    "DevOps Rumia",
+    "DevOps Wejherowo",
     "DevOps Luzino",
+    "DevOps Reda",
+    "DevOps Puck",
+    "DevOps Pomorskie",
+
+    // Rodzaj współpracy
     "DevOps B2B Polska",
     "DevOps Engineer Trójmiasto",
     "DevOps freelancer Polska",
     "DevOps kontrakt B2B",
     "DevOps zdalnie Polska",
-    "Infrastructure as Code",
+    "DevOps konsultant Trójmiasto",
+    "inżynier DevOps na zlecenie",
+    "wsparcie DevOps B2B",
+
+    // Infrastructure as Code
+    "Infrastructure as Code Trójmiasto",
     "IaC Polska",
     "automatyzacja infrastruktury",
     "automatyzacja deploymentów",
+    "infrastruktura jako kod",
+
+    // Terraform
     "Terraform Trójmiasto",
     "Terraform Polska",
+    "Terraform wdrożenie",
+    "Terraform konsultant",
+    "Terraform automatyzacja",
+
+    // Ansible
     "Ansible automatyzacja",
+    "Ansible Trójmiasto",
+    "Ansible konfiguracja serwerów",
+
+    // Kubernetes
     "Kubernetes Trójmiasto",
-    "Kubernetes Trójmiasto",
+    "Kubernetes Gdańsk",
     "Kubernetes wdrożenie",
+    "Kubernetes setup Polska",
+    "K8s Trójmiasto",
+    "konteneryzacja aplikacji",
+
+    // Docker
     "Docker kontenery",
+    "Docker Trójmiasto",
+    "konteneryzacja Polska",
+
+    // CI/CD
     "CI/CD pipeline",
     "CI/CD automatyzacja",
+    "CI/CD wdrożenie Polska",
     "Jenkins Trójmiasto",
-    "GitHub Actions",
+    "GitHub Actions Polska",
     "GitLab CI/CD",
+    "pipeline automatyzacja",
+
+    // Cloud - Azure
     "Azure DevOps Polska",
     "Azure Trójmiasto",
     "Azure Cloud Polska",
+    "Azure infrastruktura",
+    "Azure automatyzacja",
+    "Microsoft Azure Trójmiasto",
+
+    // Cloud - AWS
     "AWS Polska",
     "AWS wdrożenie",
+    "AWS Trójmiasto",
+    "Amazon Web Services Polska",
+
+    // Cloud - GCP
     "GCP Polska",
     "Google Cloud Polska",
+    "Google Cloud Platform Trójmiasto",
+
+    // GitOps
     "GitOps ArgoCD",
     "GitOps Flux",
+    "ArgoCD Trójmiasto",
+    "GitOps Polska",
+
+    // Monitoring
     "Prometheus monitoring",
     "Grafana dashboards",
     "monitoring aplikacji",
-    "strony internetowe małe firmy",
-    "strony WWW Trójmiasto",
-    "tworzenie stron internetowych",
-    "maintenance stron WWW",
-    "wdrożenia aplikacji",
-    "hosting stron Trójmiasto",
+    "Prometheus Grafana Trójmiasto",
+    "monitoring infrastruktury",
+
+    // Strony WWW - główny focus
+    "strony internetowe dla małych firm",
+    "strony internetowe małe firmy Trójmiasto",
+    "strony WWW dla firm Trójmiasto",
+    "strony WWW małe firmy",
+    "tanie strony internetowe dla firm",
+    "strony internetowe dla małych firm Gdańsk",
+    "strony internetowe dla firm Sopot",
+    "strony internetowe dla firm Gdynia",
+    "tworzenie stron internetowych dla firm",
+    "tworzenie stron WWW małe firmy",
+    "strona internetowa dla małej firmy",
+    "strona firmowa Trójmiasto",
+    "strona wizytówka dla firmy",
+    "landing page dla firmy",
+    "landing page małe firmy",
+    "strony one-page dla firm",
+    "responsywne strony dla firm",
+    "nowoczesne strony internetowe dla firm",
+    "szybkie strony WWW dla firm",
+    "strony internetowe z hostingiem",
+    "strony internetowe z maintenance",
+    "utrzymanie stron internetowych",
+    "aktualizacja strony firmowej",
+    "modernizacja strony firmowej",
+    "redesign strony firmowej",
+    "strony Next.js dla firm",
+    "strony React dla firm",
+    "profesjonalne strony dla firm",
+    "strony WWW na zlecenie",
+    "tworzenie stron B2B",
+    "strony dla startupów",
+    "strony dla lokalnych firm",
+    "strony dla usługodawców",
+    "strony dla restauracji Trójmiasto",
+    "strony dla sklepów lokalnych",
+    "portfolio firmowe online",
+    "website dla małej firmy",
+    "jak zrobić stronę dla firmy Trójmiasto",
+    "ile kosztuje strona dla małej firmy",
+    "tania strona firmowa Trójmiasto",
+
+    // Frontend/Backend
     "Next.js Polska",
     "React developer Trójmiasto",
+    "Next.js Trójmiasto",
+    "TypeScript developer",
+
+    // Ogólne IT
     "programista Trójmiasto",
     "IT freelancer Trójmiasto",
     "konsultant DevOps",
     "wsparcie infrastruktury",
+    "IT konsultant B2B",
+
+    // Migracje i wdrożenia
     "migracja do chmury",
     "cloud migration Polska",
-    "Kubernetes cluster setup",
-    "CI/CD wdrożenie",
-    "automatyzacja procesów IT"
+    "wdrożenia aplikacji",
+    "modernizacja infrastruktury",
+    "przeprowadzka do chmury Trójmiasto",
+
+    // Long-tail keywords
+    "jak wdrożyć Kubernetes Trójmiasto",
+    "automatyzacja CI/CD dla firm",
+    "DevOps dla startupów Polska",
+    "outsourcing DevOps Trójmiasto",
+    "infrastructure automation Polska",
   ],
   authors: [{ name: "Jakub Pospieszny", url: "https://github.com/Kobeep" }],
   creator: "Jakub Pospieszny",
