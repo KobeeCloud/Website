@@ -33,8 +33,9 @@ export async function POST(req: NextRequest) {
     // Send email via Resend
     try {
       await resend.emails.send({
-        from: process.env.CONTACT_EMAIL_FROM || 'onboarding@resend.dev',
+        from: process.env.CONTACT_EMAIL_FROM || 'kontakt@kobecloud.pl',
         to: process.env.CONTACT_EMAIL_TO || 'kuba.pospieszny@gmail.com',
+        replyTo: data.email, // Kliknij "Reply" i odpowiesz bezpośrednio klientowi
         subject: `Nowa wiadomość z kobecloud.pl od ${data.name}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
