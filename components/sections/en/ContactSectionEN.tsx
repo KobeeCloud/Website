@@ -1,0 +1,296 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { Send, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+export function ContactSectionEN() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: '',
+    honeypot: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [formStartTime, setFormStartTime] = useState<number>(0);
+
+  useEffect(() => {
+    setFormStartTime(Date.now());
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      if (formData.honeypot) {
+        console.warn('Bot detected: honeypot field filled');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const timeSpent = Date.now() - formStartTime;
+      if (timeSpent < 3000) {
+        console.warn('Bot detected: form filled too quickly');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        return;
+      }
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_REPLY!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', company: '', message: '', honeypot: '' });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  return (
+    <section id="contact" className="py-24 bg-secondary/30">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+            Let's Start <span className="gradient-text">Working Together</span>
+          </h2>
+          <p className="text-xl text-muted max-w-3xl mx-auto">
+            Write to me - tell me about your project or team that needs DevOps support.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-5 gap-8">
+          <div className="md:col-span-2 space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Contact</h3>
+              <div className="space-y-3">
+                <p className="text-muted">
+                  <span className="font-semibold text-foreground">Jakub Pospieszny</span>
+                  <br />
+                  KobeCloud
+                </p>
+                <p className="text-muted">
+                  <span className="font-semibold text-foreground">Email:</span>
+                  <br />
+                  kuba.pospieszny@gmail.com
+                </p>
+                <p className="text-muted">
+                  <span className="font-semibold text-foreground">Availability:</span>
+                  <br />
+                  Mon-Fri: 9:00 AM - 6:00 PM
+                </p>
+                <div className="flex items-center gap-4 pt-2">
+                  <a
+                    href="https://github.com/Kobeep"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted hover:text-primary transition-colors text-sm flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jakub-pospieszny-085a632a0/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted hover:text-primary transition-colors text-sm flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-secondary/50 border border-border rounded-xl p-6">
+              <h4 className="font-semibold text-foreground mb-3">Forms of Cooperation</h4>
+              <ul className="space-y-2 text-sm text-muted">
+                <li className="flex items-start">
+                  <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                  <span>B2B Contract - flexible forms</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                  <span>Single projects or long-term support</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                  <span>Experience with Azure, AWS, GCP</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                  <span>Commercial projects for companies</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="md:col-span-3">
+            <form onSubmit={handleSubmit} className="bg-secondary/50 border border-border rounded-xl p-8 space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="john@company.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-semibold text-foreground mb-2">
+                  Company / Project
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="Company name"
+                />
+              </div>
+
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="honeypot">Leave this field blank</label>
+                <input
+                  type="text"
+                  id="honeypot"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  placeholder="Describe your needs..."
+                />
+              </div>
+
+              <div className="bg-secondary/30 border border-border rounded-lg p-4">
+                <p className="text-xs text-muted leading-relaxed">
+                  <strong className="text-foreground">GDPR Notice:</strong><br />
+                  Data controller: KobeCloud Jakub Pospieszny, Tax ID: 5882530612, contact: kuba.pospieszny@gmail.com.
+                  Your personal data will be processed to respond to your inquiry (legal basis: Art. 6(1)(a) GDPR - consent).
+                  You have the right to access, rectify, delete, restrict processing, data portability, and object. Details in{' '}
+                  <a href="/en/privacy" className="text-primary hover:underline">
+                    Privacy Policy
+                  </a>.
+                </p>
+              </div>
+
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-success/10 border border-success/30 rounded-lg text-success text-sm">
+                  ✓ Message sent! I'll get back to you soon.
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-danger/10 border border-danger/30 rounded-lg text-danger text-sm">
+                  ✗ An error occurred. Please try again or write directly to kuba.pospieszny@gmail.com
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full px-8 py-4 bg-primary hover:bg-primary-dark disabled:bg-muted text-white rounded-lg font-semibold transition-all hover:shadow-xl hover:shadow-primary/50 flex items-center justify-center space-x-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={20} className="animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} />
+                    <span>Send Message</span>
+                  </>
+                )}
+              </button>
+
+              <p className="text-xs text-muted/70 text-center">
+                By submitting the form you consent to the processing of personal data in accordance with{' '}
+                <a href="/en/privacy" className="text-primary hover:underline font-medium">
+                  Privacy Policy
+                </a>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

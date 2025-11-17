@@ -230,7 +230,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className="scroll-smooth">
+    <html lang="pl" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -257,7 +257,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased" suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         <Footer />

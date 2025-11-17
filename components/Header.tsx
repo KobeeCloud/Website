@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
-const navigation = [
+const navigationPL = [
   { name: 'Oferta', href: '#oferta' },
   { name: 'Proces', href: '#proces' },
   { name: 'Tech Stack', href: '#tech-stack' },
@@ -13,9 +15,24 @@ const navigation = [
   { name: 'FAQ', href: '#faq' },
 ];
 
+const navigationEN = [
+  { name: 'Services', href: '#services' },
+  { name: 'Process', href: '#process' },
+  { name: 'Tech Stack', href: '#tech-stack' },
+  { name: 'About', href: '#about' },
+  { name: 'FAQ', href: '#faq' },
+];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isEnglish = pathname?.startsWith('/en');
+
+  const navigation = isEnglish ? navigationEN : navigationPL;
+  const contactHref = isEnglish ? '#contact' : '#kontakt';
+  const contactText = isEnglish ? 'Contact' : 'Kontakt';
+  const homeHref = isEnglish ? '/en' : '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +55,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
 
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={homeHref} className="flex items-center space-x-2">
             <div className="text-2xl font-bold gradient-text">KobeCloud</div>
           </Link>
 
@@ -53,11 +70,12 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Link
-              href="#kontakt"
+              href={contactHref}
               className="px-5 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-primary/50"
             >
-              Kontakt
+              {contactText}
             </Link>
           </div>
 
@@ -85,12 +103,15 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
               <Link
-                href="#kontakt"
+                href={contactHref}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-5 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg text-sm font-semibold text-center transition-all"
               >
-                Kontakt
+                {contactText}
               </Link>
             </div>
           </div>
