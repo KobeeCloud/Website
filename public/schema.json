@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "KobeCloud",
-  "description": "DevOps Engineer B2B z Gdyni/Rumi - automatyzacja infrastruktury (Terraform, Ansible, Kubernetes, Docker), CI/CD (Jenkins, GitHub Actions, Azure DevOps), monitoring (Prometheus, Grafana), strony WWW dla małych firm. Wdrożenia i maintenance w Trójmieście i zdalnie.",
+  "description": "DevOps Engineer B2B - Trójmiasto i zdalnie - automatyzacja infrastruktury (Terraform, Ansible, Kubernetes, Docker), CI/CD (Jenkins, GitHub Actions, Azure DevOps), monitoring (Prometheus, Grafana), strony WWW dla małych firm. Wdrożenia i maintenance.",
   "url": "https://kobecloud.pl",
   "logo": "https://kobecloud.pl/logo.png",
   "image": "https://kobecloud.pl/og-image.jpg",
@@ -28,7 +28,7 @@
     },
     {
       "@type": "City",
-      "name": "Gdynia"
+      "name": "Gdańsk"
     },
     {
       "@type": "City",

@@ -69,7 +69,7 @@ export function AboutSection() {
                   <br />• Strony WWW (Next.js, React, TypeScript) - tworzenie i wdrożenia
                 </p>
                 <p>
-                  <strong className="text-foreground">Lokalizacja:</strong> Luzino (rejon Gdyni), obsługuję całe Trójmiasto i zdalnie.
+                  <strong className="text-foreground">Lokalizacja:</strong> Luzino (Trójmiasto), obsługuję całe Trójmiasto i zdalnie.
                   Dla małych firm oferuję również tworzenie stron WWW, wdrożenia i maintenance.
                 </p>
               </div>

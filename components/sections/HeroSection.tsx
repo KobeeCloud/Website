@@ -24,7 +24,7 @@ export function HeroSection() {
           <br />
           DevOps Engineer
           <br />
-          Gdynia / Trójmiasto / Zdalnie
+          Trójmiasto / Zdalnie
         </h1>
 
 

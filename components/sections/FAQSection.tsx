@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: 'Gdzie działasz?',
-    answer: 'Jestem z Rumi (rejon Gdyni) - obsługuję całe Trójmiasto (Gdynia, Gdańsk, Sopot) oraz pracuję zdalnie z całą Polską.',
+    answer: 'Jestem z Luzina (Trójmiasto) - obsługuję całe Trójmiasto (Gdańsk, Sopot i okolice) oraz pracuję zdalnie z całą Polską.',
   },
   {
     question: 'Jak wyglądają koszty?',
