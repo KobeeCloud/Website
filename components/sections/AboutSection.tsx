@@ -40,7 +40,7 @@ export function AboutSection() {
             O <span className="gradient-text">KobeCloud</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto mb-2">
-            DevOps Engineer z Gdyni/Rumi - automatyzacja infrastruktury, Kubernetes, CI/CD, monitoring.
+            DevOps Engineer z Trójmiasta - automatyzacja infrastruktury, Kubernetes, CI/CD, monitoring.
           </p>
           <p className="text-lg text-muted/80">
             <span className="font-semibold text-foreground">Jakub Pospieszny</span> - ~2 lata komercyjnie + pasjonat self-learningu
