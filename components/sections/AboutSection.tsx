@@ -5,26 +5,26 @@ import { Award, Clock, Shield, Users, Sparkles, MapPin, Briefcase, GraduationCap
 const features = [
   {
     icon: Award,
-    title: 'Komercyjne projekty',
-    description: '~2 lata doświadczenia w automatyzacji infrastruktury Azure, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps).',
+    title: 'Doświadczenie komercyjne',
+    description: 'Około 3 lata pracy z automatyzacją infrastruktury Azure, Terraformem, Ansible i pipeline’ami CI/CD.',
     color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: Shield,
-    title: 'Self-taught expertise',
-    description: 'Kubernetes, GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana) - poznane samodzielnie przez praktykę i projekty własne.',
+    title: 'Platform engineering',
+    description: 'Kubernetes, GitOps (ArgoCD/Flux) i observability rozwijane w praktycznych wdrożeniach oraz laboratoriach.',
     color: 'from-emerald-500 to-teal-500',
   },
   {
     icon: Clock,
-    title: 'Pragmatyczne podejście',
-    description: 'Łączę komercyjne doświadczenie z samodzielnie zdobytą wiedzą. Wdrożenia oparte na best practices.',
+    title: 'Rozwiązania do utrzymania',
+    description: 'Od analizy procesu, przez automatyzację, po dokumentację i przekazanie. Priorytetem są czytelne, powtarzalne wdrożenia.',
     color: 'from-violet-500 to-purple-500',
   },
   {
     icon: Users,
-    title: 'Ciągła nauka',
-    description: 'Pasjonat DevOps - stale eksperymentuję z nowymi narzędziami, czytam dokumentacje, buduję proof-of-concepts.',
+    title: 'Współpraca zespołowa',
+    description: 'Wspieram developerów i zespoły operacyjne w poprawie jakości buildów, deploymentów i pracy ze środowiskami.',
     color: 'from-orange-500 to-amber-500',
   },
 ];
@@ -68,10 +68,10 @@ export function AboutSection() {
             O <span className="gradient-text">KobeCloud</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto mb-2 animate-fade-in animation-delay-200">
-            DevOps Engineer z Trójmiasta - automatyzacja infrastruktury, Kubernetes, CI/CD, monitoring.
+            DevOps Engineer z Trójmiasta. Automatyzacja Azure, IaC i CI/CD dla zespołów, które chcą wdrażać przewidywalnie.
           </p>
           <p className="text-lg text-muted/80 animate-fade-in animation-delay-300">
-            <span className="font-semibold text-foreground">Jakub Pospieszny</span> - ~2 lata komercyjnie + pasjonat self-learningu
+            <span className="font-semibold text-foreground">Jakub Pospieszny</span> · około 3 lata doświadczenia komercyjnego
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export function AboutSection() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Samodzielna nauka</h3>
+                <h3 className="text-xl font-bold text-foreground">Projekty i laboratoria</h3>
               </div>
               <div className="space-y-2 text-muted text-sm">
                 <p className="flex items-start gap-2">

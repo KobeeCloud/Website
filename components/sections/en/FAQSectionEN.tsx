@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: 'What is your experience?',
-    answer: 'Commercially (~2 years): Azure automation, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps), build automation (Perl), Vault. Self-taught: Kubernetes (from basics to advanced), GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana/Loki). For small businesses, I also create websites (Next.js, React, TypeScript).',
+    answer: 'I have about 3 years of commercial experience in Azure infrastructure automation, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps), build automation, and Vault. I also work with Kubernetes, GitOps (ArgoCD/Flux), and monitoring (Prometheus, Grafana, Loki). For small businesses, I build websites with Next.js, React, and TypeScript.',
     icon: '💼',
   },
   {

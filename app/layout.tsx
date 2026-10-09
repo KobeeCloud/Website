@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: "KobeCloud - DevOps Engineer B2B | Trójmiasto | Jakub Pospieszny",
     template: "%s | KobeCloud - DevOps & Infrastructure"
   },
-  description: "DevOps Engineer B2B - Trójmiasto i zdalnie. Automatyzacja infrastruktury (Azure, AWS, Terraform, Kubernetes), CI/CD, strony WWW dla małych firm. Wdrożenia i maintenance. ~2 lata komercyjnego doświadczenia.",
+  description: "DevOps Engineer B2B - Trójmiasto i zdalnie. Automatyzacja infrastruktury Azure, Terraform, Ansible i CI/CD, monitoring oraz strony WWW. Około 3 lata doświadczenia komercyjnego.",
   keywords: [
     // Lokalizacja główna
     "DevOps Trójmiasto",

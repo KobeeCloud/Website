@@ -9,7 +9,7 @@ import { StatusWidget } from '@/components/StatusWidget';
 
 export const metadata = {
   title: 'KobeCloud - DevOps Engineer B2B | Tri-City & Remote | Jakub Pospieszny',
-  description: 'DevOps Engineer B2B - Tri-City and remote. Infrastructure automation (Azure, AWS, Terraform, Kubernetes), CI/CD, websites for small businesses. Deployments and maintenance. ~2 years commercial experience.',
+  description: 'DevOps Engineer B2B - Tri-City and remote. Azure infrastructure automation, Terraform, Ansible, CI/CD, monitoring, and websites. About 3 years of commercial experience.',
 };
 
 export default function HomeEN() {

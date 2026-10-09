@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: 'Jakie masz doświadczenie?',
-    answer: 'Komercyjnie (~2 lata): automatyzacja Azure, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps), build automation (Perl), Vault. Samodzielnie poznałem: Kubernetes (od podstaw po zaawansowane), GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana/Loki). Dla małych firm tworzę też strony WWW (Next.js, React, TypeScript).',
+    answer: 'Mam około 3 lata doświadczenia komercyjnego w automatyzacji infrastruktury Azure, Terraformie, Ansible, CI/CD (Jenkins, Azure DevOps), automatyzacji buildów i pracy z Vault. Pracuję też z Kubernetesem, GitOps (ArgoCD/Flux) oraz monitoringiem (Prometheus, Grafana, Loki). Dla małych firm tworzę strony w Next.js, React i TypeScript.',
     icon: '💼',
   },
   {

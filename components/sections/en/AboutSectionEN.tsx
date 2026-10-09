@@ -5,26 +5,26 @@ import { Award, Clock, Shield, Users, Sparkles, MapPin, Briefcase, GraduationCap
 const features = [
   {
     icon: Award,
-    title: 'Commercial Projects',
-    description: '~2 years experience in Azure infrastructure automation, Terraform, Ansible, CI/CD (Jenkins, Azure DevOps).',
+    title: 'Commercial Experience',
+    description: 'About 3 years working with Azure infrastructure automation, Terraform, Ansible, and CI/CD pipelines.',
     color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: Shield,
-    title: 'Self-taught Expertise',
-    description: 'Kubernetes, GitOps (ArgoCD/Flux), monitoring (Prometheus/Grafana) - learned independently through practice and personal projects.',
+    title: 'Platform Engineering',
+    description: 'Kubernetes, GitOps (ArgoCD/Flux), and observability developed through hands-on deployments and labs.',
     color: 'from-emerald-500 to-teal-500',
   },
   {
     icon: Clock,
-    title: 'Pragmatic Approach',
-    description: 'Combining commercial experience with self-acquired knowledge. Deployments based on best practices.',
+    title: 'Maintainable Solutions',
+    description: 'From process analysis and automation to documentation and handover. The priority is clear, repeatable delivery.',
     color: 'from-violet-500 to-purple-500',
   },
   {
     icon: Users,
-    title: 'Continuous Learning',
-    description: 'DevOps enthusiast - constantly experimenting with new tools, reading documentation, building proof-of-concepts.',
+    title: 'Team Collaboration',
+    description: 'Supporting developers and operations teams in improving build quality, deployments, and environment workflows.',
     color: 'from-orange-500 to-amber-500',
   },
 ];
@@ -68,10 +68,10 @@ export function AboutSectionEN() {
             About <span className="gradient-text">KobeCloud</span>
           </h2>
           <p className="text-xl text-muted max-w-3xl mx-auto mb-2 animate-fade-in animation-delay-200">
-            DevOps Engineer from Tri-City - infrastructure automation, Kubernetes, CI/CD, monitoring.
+            DevOps Engineer from the Tri-City area. Azure, IaC, and CI/CD automation for teams that need predictable delivery.
           </p>
           <p className="text-lg text-muted/80 animate-fade-in animation-delay-300">
-            <span className="font-semibold text-foreground">Jakub Pospieszny</span> - ~2 years commercially + passionate self-learner
+            <span className="font-semibold text-foreground">Jakub Pospieszny</span> · about 3 years of commercial experience
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export function AboutSectionEN() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-5 h-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Self-learning</h3>
+                <h3 className="text-xl font-bold text-foreground">Projects & labs</h3>
               </div>
               <div className="space-y-2 text-muted text-sm">
                 <p className="flex items-start gap-2">
