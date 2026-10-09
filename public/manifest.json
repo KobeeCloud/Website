@@ -4,14 +4,20 @@
   "description": "DevOps Engineer - Trójmiasto i zdalnie. Automatyzacja infrastruktury, Kubernetes, CI/CD, strony WWW.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0B0F19",
-  "theme_color": "#6366F1",
+  "background_color": "#101410",
+  "theme_color": "#101410",
   "icons": [
     {
-      "src": "/logo.svg",
+      "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
